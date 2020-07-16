@@ -1,0 +1,51 @@
+create table salespeople
+( 
+  Snum int(4),
+  Sname varchar(10),
+  City varchar(10),
+  Comm float(3,2)
+);
+
+create table customers
+( 
+  Cnum int(4),
+  Cname varchar(10),
+  City varchar(10),
+  Rating int(4),
+  Snum int(4)
+);
+
+create table orders
+(
+  Onum varchar(4),
+  Amt float(7,2),
+  Odate date,
+  Cnum int(4),
+  Snum int(4)
+);
+
+INSERT INTO salespeople VALUES('1001','peel','londan','.12');
+INSERT INTO salespeople VALUES('1002','serres','san joes','.13');
+INSERT INTO salespeople VALUES('1004','motika','london','.11');
+INSERT INTO salespeople VALUES('1007','rifkin','barcelona','.15');
+INSERT INTO salespeople VALUES('1003','axerod','new york','.10');
+
+INSERT INTO customers VALUES ('2001','hoffam','london','100','1001');
+INSERT INTO customers VALUES ('2002','giovanni','rome','200','1003');
+INSERT INTO customers VALUES ('2003','liu','san jose','200','1002');
+INSERT INTO customers VALUES ('2004','grass','berlin','300','1002');
+INSERT INTO customers VALUES ('2006','clemens','london','100','1001');
+INSERT INTO customers VALUES ('2008','cisneros','san jose','300','1007');
+INSERT INTO customers VALUES ('2007','pereira','rome','100','1004');
+
+INSERT INTO orders VALUES('3001','18.69','1990-10-03','2008','1007');
+INSERT INTO orders VALUES('3003','767.19','1990-10-03','2001','1001');
+INSERT INTO orders VALUES('3002','1900.10','1990-10-03','2007','1004');
+INSERT INTO orders VALUES('3006','5160.45','1990-10-03','2003','1002');
+INSERT INTO orders VALUES('3005','1098.16','1990-10-03','2008','1007');
+INSERT INTO orders VALUES('3009','1713.23','1990-10-04','2002','1003');
+INSERT INTO orders VALUES('3007','75.75','1990-10-04','2004','1002');
+INSERT INTO orders VALUES('3008','4723.00','1990-10-05','2006','1001');
+INSERT INTO orders VALUES('3010','1309.95','1990-10-06','2004','1002');
+INSERT INTO orders VALUES('3011','9891.88','1990-10-06','2006','1001');
+
